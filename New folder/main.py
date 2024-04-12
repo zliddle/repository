@@ -14,7 +14,7 @@ def encode(numstring):
 
 
 
-
+#edit
 if __name__ == '__main__':
     option = ""
     while option != "3":
