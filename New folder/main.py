@@ -12,6 +12,20 @@ def encode(numstring):
         newstring = newstring + str(final_list[i])
     return newstring
 
+def decode(encoded_password):
+    # Validate the input
+    if len(encoded_password) != 8 or not encoded_password.isdigit():
+        return "Invalid password. Please enter an 8-digit password containing only numbers."
+
+    # Decode each digit
+    decoded_digits = []
+    for digit in encoded_password:
+        new_digit = (int(digit) - 3) % 10
+        decoded_digits.append(str(new_digit))
+
+    decoded_password = ''.join(decoded_digits)
+    return decoded_password
+
 
 
 #edit
@@ -28,7 +42,7 @@ if __name__ == '__main__':
             string_encode = input("Please enter your password to encode: ")
             newstring = encode(string_encode)
             print("Your password has been encoded and stored!\n")
-        elif option == "2"
+        elif option == "2":
             decodedstring = decode(newstring)
             print(f"The encoded password is {newstring}, and the original password is {decodedstring}\n")
         elif option == "3":
