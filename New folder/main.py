@@ -1,7 +1,7 @@
 #Zilong Liddle main and cncoder
 
 numstring = ''
-
+#edit#3
 def encode(numstring):
     newlist = []
     newstring = ""
